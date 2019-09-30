@@ -1,0 +1,9 @@
+Ki nevet a végén játék
+
+A feladat rövid leírása: a feladat megvalósítása egy szerver és egy kliens program írásából áll. Az eredményként bemutatott programok segítségével kell lehetõvé tenni, hogy két ember a kliens program egy-egy példányát használva ki nevet a végén játékot játsszon egymással a szerveren keresztül.
+
+Játékszabályok: A játékosok két két megkülönböztethetõ bábúval rendelkeznek. A játékosok felváltva dobnak dobókockával, s egy választott bábuval a dobott értéket lépik. Ha egy játékos olyan mezõre lép, ahol már bábu áll (akár saját, akár ellenfél bábuja), akkor a már ott álló bábu az 1. mezõre kerül vissza ("ütés" helyzet). a 49. mezõn túl már nincs ütés helyzet. A játék célja, hogy a játékos mindkét bábujával túlhaladjon a 49. mezõn; amelyik játékosnak ez elsõként sikerül, az a játékos a nyertes.
+
+A program mûködése: Indítás után a szerver két játékos jelentkezésére vár. Az elsõ játékos bejelentkezése után üzenetet kap, miszerint a szerver még a másik játékosra vár. A második játékos bejelentkezése után a játék automatikusan elindul. A dobókockát a szerver reprezentálja 1-6 közötti véletlen szám generálásával, s a generált értéket a megfelelõ klienshez juttatja. A kliensek elküldik a szervernek, hogy a játékos melyik bábuval szeretne lépni. A szerver feladata, hogy a kliensektõl érkezõ információk alapján frissítse a szerveren tárolt játéktábla állását, majd továbbítsa azt a játékosok felé.
+
+A játékmenettel kapcsolatos minimális elvárások: A programnak kezelnie kell az ütési helyzetet, s fel kell ismernie a játszma végeredményét (nyertes játékos, vesztes játékos); továbbá lehetõséget kell adni a klienseknek a feladásra a "feladom" üzenet elküldésével. A játék befejezésekor a végeredmény közlése után mindhárom alkalmazás (szerver +2 kliens) bezárul.

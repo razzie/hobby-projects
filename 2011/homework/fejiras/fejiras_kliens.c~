@@ -1,0 +1,196 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <sys/file.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+
+#define PORT_NO  55225
+#define SERVER_ADDR "127.0.0.1"
+
+int main(void)
+{
+
+// CLIENT DEKLARÁLÁS
+    int s;
+    struct sockaddr_in server;    /* socket name (addr) of server *//*szerver adatait tárolja */
+    int server_size = sizeof server;    /* length of the socket addr. server */
+
+    struct sockaddr_in client;    /* socket name of client */
+    int client_size = sizeof client;    /* length of the socket addr. client */
+
+    int ip, err;
+    int on = 1;
+// JÁTÉKHOZ SZÜKSÉGES DEKLARÁCIÓ
+    char bemenet[10];        //ebbe fog a játékos írni
+    char buffer[100];        //server küld értéket ebbe a bufferbe
+
+// CSATLAKOZÁSHOZ SZÜKSÉGES BEÁLLÍTÁSOK
+
+    ip = inet_addr(SERVER_ADDR);
+    server.sin_family = AF_INET;
+    server.sin_addr.s_addr = ip;
+    server.sin_port = htons(PORT_NO);
+
+    s = socket(AF_INET, SOCK_STREAM, 0);
+    if (s < 0) {
+    error("%s: Socket creation error\n", "");
+    exit(1);
+    }                //if vége
+
+    setsockopt(s, SOL_SOCKET, SO_REUSEADDR, (char *) &on, sizeof on);
+    setsockopt(s, SOL_SOCKET, SO_KEEPALIVE, (char *) &on, sizeof on);
+    err = connect(s, (struct sockaddr *) &server, server_size);
+
+
+    printf
+    ("##############################################################\n");
+    printf("\tJÁTÉKSZABÁLYOK");
+    printf("\tÜdvözlünk a fej vagy írás játékban!\n");
+    printf("\tfej vokshoz gépelje a fej-et\n");
+    printf("\tírás vokshoz gépelje az iras-t \n");
+    printf
+    ("##############################################################\n");
+
+    while (1) {
+    sleep(1);
+    err = recv(s, buffer, 100, 0);
+    //ellenőrizni kell hogy a recv 0
+    if (err == 0) {
+        printf("Kapcsolat megszakadt\n");
+        return 0;
+    }
+    if (err < 0) {
+        printf("HIBA Történt Nincs indítva szerver!\n");
+        return 0;
+    }
+
+    switch (buffer[0]) {    // első bájt jelenti hogy milyen üzenet kaptam
+
+    case 0:
+        printf("Várakozás a második játékosra\n");
+        printf("\n");
+        break;
+
+    case 1:
+        printf("KEZDŐDIK A JÁTÉK");
+        printf("\n");
+        break;
+    case 2:
+        printf("< %d. MENET >\n ", buffer[1]);
+        printf("#####################");
+        printf("\nFELADÁS a felad parancsal!");
+        printf("\nTippelj:\n");
+        printf("fej vagy iras vagy feladom\n");
+
+        while (1) {
+        scanf("%s", bemenet);
+
+        if (strcmp(bemenet, "fej") == 0
+            || strcmp(bemenet, "iras") == 0
+            || strcmp(bemenet, "feladom") == 0)
+            break;
+        else
+            printf("Hibásan adtad meg!");
+
+        }
+
+        err = send(s, bemenet, 10, 0);    // s a socket, bemenetből, bemenet hosszát +1 a záró 0  minden string végén van \0, flag servernek
+
+        if (err == 0 || err < 0) {
+        printf("HIBA\n");
+        return 0;
+        }
+        break;
+
+    case 3:
+        //printf("Mit dobott a másik játékos: %s", &buffer[1]);  // buffer második betüjétől kezdve kiíraja
+        switch (buffer[1]) {
+        case 'f':
+        printf(" A másik játékos fejet tippelt\n");
+        break;
+        case 'i':
+        printf(" A másik játékos irast tippelt\n");
+        break;
+        }
+        break;
+
+    case 4:
+        printf("\n");
+
+        printf("\n");
+        printf("----------------------------------------------");
+
+        switch (buffer[4]) {
+        case 'f':
+        printf("\nAz  érme értéke: fej\n");
+        break;
+        case 'i':
+        printf("\nAz érme értéke: iras\n");
+        break;
+        }
+        printf("\n");
+        printf("##############################\n");
+        printf("Eredményed:      %d/%d\n", buffer[1], buffer[3]);
+        printf("Másik Eredménye: %d/%d\n", buffer[2], buffer[3]);
+        printf("----------------------------------------------\n");
+        break;
+
+        //valami
+    case 5:
+
+        printf("=======================");
+        printf("\n");
+        printf("VÉGEREDMÉNY: SCORES");
+        printf("\n");
+        printf("----------------------------------------------");
+        printf("\n");
+        printf("JÁTÉKOS: TE    -  MÁSIK \n");
+        printf("Eredmeny  %d   -   %d   \n", buffer[1], buffer[2]);    // ha a tömb 1 elemére hivatkozol akkor annak a pointerét 1 nek &jel
+        printf("----------------------------------------------");
+        printf("\n");
+        printf("=======================\n");
+        switch (buffer[3]) {
+        case 0:
+        printf("Te GyőztéL");
+        break;
+        case 1:
+        printf("Másik Győzött");
+        break;
+        case 2:
+        printf("Döntetlen");
+        break;
+        case 3:
+        printf("Feladtad");
+        break;
+        case 4:
+        printf("A másik feladta");
+        break;
+        }
+
+        while (1) {
+        printf("\nÚjra játszátok? \n ujra or vege : ");
+        scanf("%s", bemenet);
+        if (strcmp(bemenet, "ujra") == 0
+            || strcmp(bemenet, "vege") == 0)
+            break;
+        else
+            printf("Hibásan adtad meg!");
+        }
+
+        err = send(s, bemenet, 10, 0);    // s a socket, bemenetből, bemenet hosszát +1 a záró 0  minden string végén van \0, flag servernek
+        if (err == 0 || err < 0) {
+        printf("HIBA\n");
+        return 0;
+        }
+
+        break;
+    case 6:
+        printf("JÁTÉK VÉGE\n\n");
+        return 0;
+    }            // ez nagy swicth
+    }                //fő ciklus vége
+
+    return 0;
+}
