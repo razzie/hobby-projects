@@ -1,0 +1,6 @@
+bin/hexagon*
+obj
+.vs
+hexagon.sdf
+hexagon.opensdf
+hexagon.v12.suo
