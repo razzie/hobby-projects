@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-2.2.0.min.js"></script>
+		<style>
+		body {
+			cursor: none;
+			margin: 0;
+		}
+		.mouse {
+			width: 32px;
+			height: 32px;
+			background-image: url('mouse.png');
+			position: absolute;
+			transform-origin: 0 0;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="mouse"></div>
+		<script>
+		var mouseX = 0;
+		var mouseY = 0;
+		var mouse = $(".mouse");
+		$(document).mousemove(function(e){
+			var angle = Math.atan2(e.pageX - mouseX, -e.pageY + mouseY);
+			mouse.css({ 'transform': 'rotate(' + (angle + Math.PI/4) + 'rad)', 'left': e.pageX, 'top': e.pageY });
+			mouseX = e.pageX - Math.sin(angle) * 32;
+			mouseY = e.pageY + Math.cos(angle) * 32;
+		});
+		</script>
+	</body>
+</html>
