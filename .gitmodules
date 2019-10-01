@@ -13,3 +13,6 @@
 [submodule "2018/raztools"]
 	path = 2018/raztools
 	url = https://github.com/razzie/raztools.git
+[submodule "2013/gglib"]
+	path = 2013/gglib
+	url = https://github.com/razzie/gglib.git
