@@ -16,3 +16,6 @@
 [submodule "2013/gglib"]
 	path = 2013/gglib
 	url = https://github.com/razzie/gglib.git
+[submodule "2015/gglib2"]
+	path = 2015/gglib2
+	url = https://github.com/razzie/gglib2.git
