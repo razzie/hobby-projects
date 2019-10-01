@@ -1,3 +1,6 @@
 [submodule "2017/PotatoGame"]
 	path = 2017/PotatoGame
 	url = https://github.com/razzie/PotatoGame.git
+[submodule "2017/razzgravitas"]
+	path = 2017/razzgravitas
+	url = https://github.com/razzie/razzgravitas
