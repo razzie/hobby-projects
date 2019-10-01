@@ -7,3 +7,6 @@
 [submodule "2017/dummyserver"]
 	path = 2017/dummyserver
 	url = https://github.com/razzie/dummyserver
+[submodule "2018/raztalk"]
+	path = 2018/raztalk
+	url = https://github.com/razzie/raztalk.git
