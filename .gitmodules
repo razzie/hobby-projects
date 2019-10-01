@@ -19,3 +19,6 @@
 [submodule "2015/gglib2"]
 	path = 2015/gglib2
 	url = https://github.com/razzie/gglib2.git
+[submodule "2016/librazzie"]
+	path = 2016/librazzie
+	url = https://github.com/razzie/librazzie.git
