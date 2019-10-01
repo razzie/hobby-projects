@@ -10,3 +10,6 @@
 [submodule "2018/raztalk"]
 	path = 2018/raztalk
 	url = https://github.com/razzie/raztalk.git
+[submodule "2018/raztools"]
+	path = 2018/raztools
+	url = https://github.com/razzie/raztools.git
