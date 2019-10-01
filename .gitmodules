@@ -4,3 +4,6 @@
 [submodule "2017/razzgravitas"]
 	path = 2017/razzgravitas
 	url = https://github.com/razzie/razzgravitas
+[submodule "2017/dummyserver"]
+	path = 2017/dummyserver
+	url = https://github.com/razzie/dummyserver
