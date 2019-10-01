@@ -22,3 +22,6 @@
 [submodule "2016/librazzie"]
 	path = 2016/librazzie
 	url = https://github.com/razzie/librazzie.git
+[submodule "2019/PocceMod"]
+	path = 2019/PocceMod
+	url = https://github.com/razzie/PocceMod.git
