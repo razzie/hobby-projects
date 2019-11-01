@@ -25,3 +25,6 @@
 [submodule "2019/PocceMod"]
 	path = 2019/PocceMod
 	url = https://github.com/razzie/PocceMod.git
+[submodule "2019/riddle-solver"]
+	path = 2019/riddle-solver
+	url = https://github.com/razzie/riddle-solver.git
