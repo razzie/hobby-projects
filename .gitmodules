@@ -28,3 +28,9 @@
 [submodule "2019/riddle-solver"]
 	path = 2019/riddle-solver
 	url = https://github.com/razzie/riddle-solver.git
+[submodule "2018/gorzsony.com"]
+	path = 2018/gorzsony.com
+	url = https://github.com/razzie/gorzsony.com.git
+[submodule "2019/gorzsony.com"]
+	path = 2019/gorzsony.com
+	url = https://github.com/razzie/gorzsony.com.git
