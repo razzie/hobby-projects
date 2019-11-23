@@ -37,3 +37,6 @@
 [submodule "2016/floating-islands/src"]
 	path = 2016/floating-islands/src
 	url = https://github.com/razzie/QubeRaid.git
+[submodule "2014/prepi"]
+	path = 2014/prepi
+	url = https://github.com/razzie/prepi.git
