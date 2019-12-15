@@ -40,3 +40,6 @@
 [submodule "2014/prepi"]
 	path = 2014/prepi
 	url = https://github.com/razzie/prepi.git
+[submodule "2019/ideagen"]
+	path = 2019/ideagen
+	url = https://github.com/razzie/ideagen.git
