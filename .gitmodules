@@ -43,3 +43,6 @@
 [submodule "2019/ideagen"]
 	path = 2019/ideagen
 	url = https://github.com/razzie/ideagen.git
+[submodule "2019/Doboz.NET"]
+	path = 2019/Doboz.NET
+	url = https://github.com/razzie/Doboz.NET.git
