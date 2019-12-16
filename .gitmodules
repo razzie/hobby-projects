@@ -46,3 +46,6 @@
 [submodule "2019/Doboz.NET"]
 	path = 2019/Doboz.NET
 	url = https://github.com/razzie/Doboz.NET.git
+[submodule "2019/razlink"]
+	path = 2019/razlink
+	url = https://github.com/razzie/razlink.git
