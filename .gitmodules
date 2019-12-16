@@ -49,3 +49,6 @@
 [submodule "2019/razlink"]
 	path = 2019/razlink
 	url = https://github.com/razzie/razlink.git
+[submodule "2019/github-backup"]
+	path = 2019/github-backup
+	url = https://github.com/razzie/github-backup.git
