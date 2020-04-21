@@ -52,3 +52,6 @@
 [submodule "2019/github-backup"]
 	path = 2019/github-backup
 	url = https://github.com/razzie/github-backup.git
+[submodule "2019/raztracer"]
+	path = 2019/raztracer
+	url = https://github.com/razzie/raztracer.git
