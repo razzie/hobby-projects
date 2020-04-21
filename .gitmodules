@@ -55,3 +55,6 @@
 [submodule "2019/raztracer"]
 	path = 2019/raztracer
 	url = https://github.com/razzie/raztracer.git
+[submodule "2020/random"]
+	path = 2020/random
+	url = https://github.com/razzie/random.git
