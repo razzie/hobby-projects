@@ -61,3 +61,6 @@
 [submodule "2020/uuid-server"]
 	path = 2020/uuid-server
 	url = https://github.com/razzie/uuid-server.git
+[submodule "2020/geoip-server"]
+	path = 2020/geoip-server
+	url = https://github.com/razzie/geoip-server.git
