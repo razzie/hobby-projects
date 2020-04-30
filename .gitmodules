@@ -67,3 +67,6 @@
 [submodule "2020/mediaserver"]
 	path = 2020/mediaserver
 	url = https://github.com/razzie/mediaserver.git
+[submodule "2020/file64"]
+	path = 2020/file64
+	url = https://github.com/razzie/file64.git
