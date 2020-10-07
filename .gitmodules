@@ -76,3 +76,6 @@
 [submodule "2020/razproxy"]
 	path = 2020/razproxy
 	url = https://github.com/razzie/razproxy.git
+[submodule "2020/razvhost"]
+	path = 2020/razvhost
+	url = https://github.com/razzie/razvhost.git
