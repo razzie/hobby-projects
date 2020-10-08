@@ -79,3 +79,6 @@
 [submodule "2020/razvhost"]
 	path = 2020/razvhost
 	url = https://github.com/razzie/razvhost.git
+[submodule "2020/beepboop"]
+	path = 2020/beepboop
+	url = https://github.com/razzie/beepboop.git
