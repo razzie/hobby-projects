@@ -82,3 +82,6 @@
 [submodule "2020/beepboop"]
 	path = 2020/beepboop
 	url = https://github.com/razzie/beepboop.git
+[submodule "2020/uid"]
+	path = 2020/uid
+	url = https://github.com/razzie/uid.git
