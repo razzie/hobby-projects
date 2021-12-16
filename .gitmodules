@@ -85,3 +85,15 @@
 [submodule "2020/uid"]
 	path = 2020/uid
 	url = https://github.com/razzie/uid.git
+[submodule "2021/riddle-solver-v2"]
+	path = 2021/riddle-solver-v2
+	url = https://github.com/razzie/riddle-solver.git
+[submodule "2021/pizzabot"]
+	path = 2021/pizzabot
+	url = https://github.com/razzie/pizzabot.git
+[submodule "2021/razgio"]
+	path = 2021/razgio
+	url = https://github.com/razzie/razgio.git
+[submodule "2021/go-doboz"]
+	path = 2021/go-doboz
+	url = https://github.com/razzie/go-doboz.git
