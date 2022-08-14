@@ -97,3 +97,15 @@
 [submodule "2021/go-doboz"]
 	path = 2021/go-doboz
 	url = https://github.com/razzie/go-doboz.git
+[submodule "2022/steamcmd-wine"]
+	path = 2022/steamcmd-wine
+	url = https://github.com/razzie/steamcmd-wine.git
+[submodule "2022/k8s-db-operator"]
+	path = 2022/k8s-db-operator
+	url = https://github.com/razzie/k8s-db-operator.git
+[submodule "2022/raz-stack"]
+	path = 2022/raz-stack
+	url = https://github.com/razzie/raz-stack.git
+[submodule "2022/razvhost-new-features"]
+	path = 2022/razvhost-new-features
+	url = https://github.com/razzie/razvhost.git
