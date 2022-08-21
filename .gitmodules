@@ -109,3 +109,6 @@
 [submodule "2022/razvhost-new-features"]
 	path = 2022/razvhost-new-features
 	url = https://github.com/razzie/razvhost.git
+[submodule "2022/stream-manager"]
+	path = 2022/stream-manager
+	url = https://github.com/razzie/stream-manager.git
