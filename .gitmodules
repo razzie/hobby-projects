@@ -112,3 +112,6 @@
 [submodule "2022/stream-manager"]
 	path = 2022/stream-manager
 	url = https://github.com/razzie/stream-manager.git
+[submodule "2022/razchess"]
+	path = 2022/razchess
+	url = https://github.com/razzie/razchess.git
