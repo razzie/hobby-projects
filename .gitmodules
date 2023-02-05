@@ -118,3 +118,6 @@
 [submodule "2023/razchess"]
 	path = 2023/razchess
 	url = https://github.com/razzie/razchess.git
+[submodule "2023/s3proxy"]
+	path = 2023/s3proxy
+	url = https://github.com/razzie/s3proxy.git
