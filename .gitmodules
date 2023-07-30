@@ -121,3 +121,6 @@
 [submodule "2023/s3proxy"]
 	path = 2023/s3proxy
 	url = https://github.com/razzie/s3proxy.git
+[submodule "2023/0x40hues"]
+	path = 2023/0x40hues
+	url = https://github.com/razzie/0x40hues.git
