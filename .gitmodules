@@ -124,3 +124,24 @@
 [submodule "2023/0x40hues"]
 	path = 2023/0x40hues
 	url = https://github.com/razzie/0x40hues.git
+[submodule "2023/proxytest"]
+	path = 2023/proxytest
+	url = https://github.com/razzie/proxytest
+[submodule "2023/wskit"]
+	path = 2023/wskit
+	url = https://github.com/razzie/wskit
+[submodule "2023/broadcaster"]
+	path = 2023/broadcaster
+	url = https://github.com/razzie/broadcaster
+[submodule "2023/json2go"]
+	path = 2023/json2go
+	url = https://github.com/razzie/json2go
+[submodule "2023/jsonchan"]
+	path = 2023/jsonchan
+	url = https://github.com/razzie/jsonchan
+[submodule "2023/commander"]
+	path = 2023/commander
+	url = https://github.com/razzie/commander
+[submodule "2023/sleepsort"]
+	path = 2023/sleepsort
+	url = https://github.com/razzie/sleepsort
