@@ -145,3 +145,6 @@
 [submodule "2023/sleepsort"]
 	path = 2023/sleepsort
 	url = https://github.com/razzie/sleepsort
+[submodule "2015/first_personal_website"]
+	path = 2015/first_personal_website
+	url = https://github.com/razzie/first_personal_website.git
