@@ -148,3 +148,27 @@
 [submodule "2015/first_personal_website"]
 	path = 2015/first_personal_website
 	url = https://github.com/razzie/first_personal_website.git
+[submodule "2024/broadcaster"]
+	path = 2024/broadcaster
+	url = https://github.com/razzie/broadcaster.git
+[submodule "2024/commander"]
+	path = 2024/commander
+	url = https://github.com/razzie/commander.git
+[submodule "2024/botkit"]
+	path = 2024/botkit
+	url = https://github.com/razzie/botkit.git
+[submodule "2024/dlutil"]
+	path = 2024/dlutil
+	url = https://github.com/razzie/dlutil.git
+[submodule "2024/jsontime"]
+	path = 2024/jsontime
+	url = https://github.com/razzie/jsontime.git
+[submodule "2024/fakewriteseeker"]
+	path = 2024/fakewriteseeker
+	url = https://github.com/razzie/fakewriteseeker.git
+[submodule "2024/personal-website"]
+	path = 2024/personal-website
+	url = https://github.com/razzie/personal-website.git
+[submodule "2024/telegram-apiserv-docker"]
+	path = 2024/telegram-apiserv-docker
+	url = https://github.com/razzie/telegram-apiserv-docker.git
