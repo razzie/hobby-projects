@@ -172,3 +172,6 @@
 [submodule "2024/telegram-apiserv-docker"]
 	path = 2024/telegram-apiserv-docker
 	url = https://github.com/razzie/telegram-apiserv-docker.git
+[submodule "2025/mock"]
+	path = 2025/mock
+	url = https://github.com/razzie/mock.git
