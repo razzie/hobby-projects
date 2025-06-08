@@ -13,16 +13,18 @@ float smin(float a, float b, float k)
 
 float edge( float dist, vec2 normal )
 {
-    const vec2 light = vec2(1.0,0.0);
-    const float dMax = -0.02;
-    dist = clamp(dist / dMax, 0.0, 1.0);
-    return mix(0.8, 1.0, (1.0 - dist) * dot(normal, light));
+    const vec2 lightDir = vec2(1.0,0.0);
+    const float invEdgeThickness = 1.0 / -0.04;
+    float u = clamp(dist * invEdgeThickness, 0.0, 1.0);
+    float factor = 1.0 - u * (2.0 - u);
+    return mix(0.75, 1.0, factor * dot(normal, lightDir));
 }
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     vec2 uv = fragCoord/iResolution.xy;
     vec2 mouse = iMouse.xy/iResolution.xy;
+    if (mouse.x == 0.0 && mouse.y == 0.0) mouse = vec2(0.5,0.475);
 
     const float BIG = 1e20;
     const float K = 0.1;
@@ -73,9 +75,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
         float otherDist = BIG;
         for (int j = 0; j < NUM_GROUPS; ++j)
         {
-            float isSelfGroup = float(i == j);
-            float notSelfGroup = 1.0 - isSelfGroup;
-            float d = mix(distances[j], BIG, isSelfGroup);
+            float d = mix(distances[j], BIG, float(i == j));
             otherDist = min(otherDist, d);
         }
         squeezedDistances[i] = distances[i] - smin(otherDist, 0.0, K/2.0);
