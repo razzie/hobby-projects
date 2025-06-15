@@ -70,10 +70,10 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
     // do the squeezing
     float squeezedDistances[NUM_GROUPS];
-    for (int i = 0; i < NUM_GROUPS; ++i)
+    for (int i = 1; i < NUM_GROUPS; ++i)
     {
         float otherDist = BIG;
-        for (int j = 0; j < NUM_GROUPS; ++j)
+        for (int j = 1; j < NUM_GROUPS; ++j)
         {
             float d = mix(distances[j], BIG, float(i == j));
             otherDist = min(otherDist, d);
@@ -83,7 +83,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
     // select group at pixel
     int selectedGroup = 0;
-    for (int i = 0; i < NUM_GROUPS; ++i)
+    for (int i = 1; i < NUM_GROUPS; ++i)
     {
         int shouldSelect = int(squeezedDistances[i] < 0.0);
         selectedGroup = selectedGroup * (1 - shouldSelect) + i * shouldSelect;
