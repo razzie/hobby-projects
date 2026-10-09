@@ -175,3 +175,9 @@
 [submodule "2025/mock"]
 	path = 2025/mock
 	url = https://github.com/razzie/mock.git
+[submodule "2026/ebiten-metaballs"]
+	path = 2026/ebiten-metaballs
+	url = https://github.com/razzie/ebiten-metaballs.git
+[submodule "2026/ebiten-infinicave"]
+	path = 2026/ebiten-infinicave
+	url = https://github.com/razzie/ebiten-infinicave.git
